@@ -54,6 +54,9 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypothesis and how to validate?
 
+The Hypothesis of this project is that a deep learning model, particularly a Convolutional Neural Network (CNN), can effectively classify cherry leaf images into 'Healthy' and 'Powdery Mildew' with high accuracy.
+The validation process involved the following:
+- Using a abalanced dataset with sufficient examples of both classes
 - List here your project hypothesis(es) and how you envision validating it (them).
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
