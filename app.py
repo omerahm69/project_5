@@ -6,18 +6,18 @@ import tensorflow as tf
 from app_pages.multipages import MultiPage
 
 # load pages scripts
-from app_pages.page_summary import page_summary
+from app_pages.page_summary import page_summary_body
 
-from app_pages.page_hypothesis import page__hypothesis
-from app_pages.page_ML_performance import page_ML_performance
+from app_pages.page_hypothesis import page_project_hypothesis_body
+from app_pages.page_ML_performance import page_ML_performance_body
 
-app = MultiPage(app_name="Malaria Detector")
+app = MultiPage(app_name="")
 
 # Add your app pages here using .add_page()
-app.add_page("Quick Project Summary", page_summary)
+app.add_page("Quick Project Summary", page_summary_body)
 #app.add_page("Cells Visualiser", page_cells_visualizer_body)
 #app.add_page("Malaria Detection", page_malaria_detector_body)
 app.add_page("Project Hypothesis", page_project_hypothesis_body)
-app.add_page("ML Performance Metrics", page_ml_performance_metrics)
+app.add_page("ML Performance", page_ML_performance_body)
 
 app.run()  # Run the app
