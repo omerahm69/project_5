@@ -12,7 +12,7 @@ You can safely delete the Template Instructions section of this README.md file a
 
 1. Use this template to create your GitHub project repo
 
-1. In your newly created repo click on the green Code button. 
+1. In your newly created repo click on the green Code button.
 
 1. Then, from the Codespaces tab, click Create codespace on main.
 
@@ -96,6 +96,8 @@ The validation process involved the following:
 - Here, you should list the libraries used in the project and provide an example(s) of how you used these libraries.
 
 ## Credits
+
+The process from the Code Institute WalkthroughProject01 project was used to help create this project.
 
 - In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
 - You can break the credits section up into Content and Media, depending on what you have included in your project.
