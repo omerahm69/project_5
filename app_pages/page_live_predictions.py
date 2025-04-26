@@ -1,3 +1,6 @@
+import streamlit as st
+import matplotlib.pyplot as plt
+
 def page_live_predictions_body():
 
     st.title("### Live Predictions")
