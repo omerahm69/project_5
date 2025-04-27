@@ -1,9 +1,12 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 from matplotlib.image import imread
-#from src.machine_learning.evaluate_clf import load_test_evaluation
+from src.machine_learning.evaluate_clf import load_test_evaluation
 
+def load_test_evaluation(version):
+    return np.load(f"outputs/{version}/test_evaluation.npy")
 
 def page_ML_performance_body():
     version = 'v1'

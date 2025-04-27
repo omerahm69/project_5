@@ -8,7 +8,6 @@ from PIL import Image
 from src.data_management import load_pkl_file
 
 
-
 def plot_predictions_probabilities(pred_proba, pred_class):
     """
     Plot prediction probability results
@@ -16,7 +15,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
 
     prob_per_class = pd.DataFrame(
         data=[0, 0],
-        index={'Parasitised': 0, 'Uninfected': 1}.keys(),
+        index={'Healthy': 0, 'Powdery_mildew': 1}.keys(),
         columns=['Probability']
     )
     prob_per_class.loc[pred_class] = pred_proba
@@ -45,12 +44,12 @@ def resize_input_image(img, version):
 
     return my_image
 
-def load_model_and_predict(my_image, v1):
+def load_model_and_predict(my_image, version):
     """
     Load and perform ML prediction over live images
     """
 
-    model = load_model(f"outputs/{v1}/cherry_leaf_model.h5")
+    model = load_model(f"outputs/{version}/cherry_leaf_model.h5")
     
     pred_proba = model.predict(my_image)[0, 0]
 
