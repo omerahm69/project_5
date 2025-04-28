@@ -35,17 +35,25 @@ st.info(
 
         **Project Dataset**
         * The dataset used for this project is from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
-        The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product. "
+        The dataset contains +4 thousand images taken from the client's
+        crop fields.
+        The images show healthy cherry leaves and cherry leaves
+        that have powdery mildew, a fungal disease that affects many plant species.
+        The cherry plantation crop is one of the finest products in their portfolio,
+        and the company is concerned about supplying the market with a compromised quality product. "
         
-        "The images show healthy cherry leaves and cherry leaves that have powdery mildew.""")
+        "The images show healthy cherry leaves and cherry leaves that
+        have powdery mildew.""")
 
 st.write(
         f"* For additional information, please visit and **read** the "
         f"[Project README file](https://github.com/codeinstitute/cherry-leaves/main/README.md).")
     
 st.success(
-        f"The project has 2 business requirements:\n"
-        f"* 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew."
-        f"a healthy cherry leaves and cherry leaves that have powdery mildew.\n"
-        f"* 2 -The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew. "
-        )
+        
+    f"""The project has 2 business requirements:
+* 1 - The client is interested in conducting a study to visually differentiate
+    healthy cherry leaves from those with powdery mildew.
+* 2 - The client is interested in predicting if a cherry leaf
+    is healthy or contains powdery mildew."""
+)

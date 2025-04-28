@@ -8,13 +8,27 @@ from src.machine_learning.evaluate_clf import load_test_evaluation
 def load_test_evaluation(version):
     return np.load(f"outputs/{version}/test_evaluation.npy")
 
+
+
 def page_ML_performance_body():
     version = 'v1'
 
+    import os
+
+    path = f"outputs/{version}/labels_distribution.png"  # or your correct path
+    print("Does file exist?", os.path.exists(path))
+    print("Absolute path:", os.path.abspath(path))
+
+
     st.write("### Train, Validation and Test Set: Labels Frequencies")
 
-    labels_distribution = plt.imread(f"outputs/{version}/labels_distribution.png")
-    st.image(labels_distribution, caption='Labels Distribution on Train, Validation and Test Sets')
+
+    labels_distribution = plt.imread("outputs\\v1\\labels_distribution.png")
+        
+    # plt.imread(f"C:\python_projects\project_5\outputs\v1\labels_distribution.png")
+    #labels_distribution = plt.imread(r"outputs/{version}/labels_distribution.png")
+    st.image(labels_distribution, caption='Labels Distribution on Train,'\
+'Validation and Test Sets')
     st.write("---")
     
     st.write("### Model History")
