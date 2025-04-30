@@ -143,8 +143,6 @@ Page 5: Live Predictions
 
 ## Main Data Analysis and Machine Learning Libraries
 
--
-
 ## Credits
 
 - The process from the Code Institute WalkthroughProject01 project was used to help create this project.

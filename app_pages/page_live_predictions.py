@@ -12,7 +12,6 @@ def page_live_predictions_body():
         f"*Upload cherry leaf images to predict their health status.)*"
         
 )
-    
 def plot_predictions_probabilities(pred_proba, pred_class):
     """
     Plot prediction probability results
@@ -28,11 +27,11 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         if x not in pred_class:
             prob_per_class.loc[x] = 1 - pred_proba
     prob_per_class = prob_per_class.round(3)
-    prob_per_class['Diagnostic'] = prob_per_class.index
+    prob_per_class['Classify'] = prob_per_class.index
 
     fig = px.bar(
         prob_per_class,
-        x='Diagnostic',
+        x='Classify',
         y=prob_per_class['Probability'],
         range_y=[0, 1],
         width=600, height=300, template='seaborn')
@@ -72,10 +71,10 @@ def load_model_and_predict(my_image, version):
 # Load the trained model (load only once)
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("outputs/v1/cherry_leaf_model.h5")
+    model = tf.keras.models.load_model("outputs/v1/my_model.keras")
     return model
 
-# Preprocessing function (modify to match your model's input)
+# Preprocessing function
 def preprocess_image(img):
     img = img.convert("RGB")  # Convert RGBA to RGB
     img = img.resize((128, 128))  # Match model's input size
