@@ -1,30 +1,21 @@
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Template Instructions
-
-Welcome,
-
-This is the Code Institute student template for the Cherry Leaves project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
-
 ## How to use this repo
 
-1. Use this template to create your GitHub project repo
+1. Fork this repo
 
-1. In your newly created repo click on the green Code button.
+2. In your forked  cherry leafs classifier repo click on the green Code button.
 
-1. Then, from the Codespaces tab, click Create codespace on main.
+3. Then, from the Codespaces tab, click Create codespace on main.
 
-1. Wait for the workspace to open. This can take a few minutes.
+4. Wait for the workspace to open. This can take a few minutes.
 
-1. Open a new terminal and `pip3 install -r requirements.txt`
+5. Open the jupyter_notebooks directory in the explorer sidebar, and click on the notebook you want to open
 
-1. Open the jupyter_notebooks directory, and click on the notebook you want to open.
+6. Click the kernel button and choose Python Environments.
 
-1. Click the kernel button and choose Python Environments.
+7.Choose the kernel that says Python 3.12.1 as it inherits from the workspace, so it will be Python-3.12.1 as installed by Codespaces. To confirm this, you can use `! python --version` in a notebook code cell.
 
-Note that the kernel says Python 3.12.1 as it inherits from the workspace, so it will be Python-3.12.1 as installed by Codespaces. To confirm this, you can use `! python --version` in a notebook code cell.
 
 ## Cloud IDE Reminders
 
@@ -61,16 +52,75 @@ The validation process involved the following:
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-- List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+-Business Requirement 1: Data Visualization
+
+-   We will display the "mean" and "standard deviation" images for healthy and powdery_mildew.
+-   We will display the difference between average healthy and powdery_mildew.
+-   We will display an image montage for either     healthy and powdery_mildew.
+
+Business Requirement 2: Classification
+
+-   We want to predict if a given image is healthy and powdery_mildew.
+-   We want to build a binary classifier and generate reports.
 
 ## ML Business Case
 
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+-We want an ML model to predict if an image is healthy or not based on historical image data. It is a supervised model, a 2-class, single-label classification model.
+Our ideal outcome is to provide the the cherry plantation crop from Farmy & Foodsmedical with a faster and more reliable way to differentiate between healthy and powdery mildew leaves.
+
+
+The model success metrics are
+
+Accuracy of 65% or above on the test set.
+The model output is defined as a flag, indicating if the image is healthy or not and the associated probability of that. As usual, the medical staff will do the blood smear workflow and upload the picture to the App. The prediction is made on the fly (not in batches).
+Heuristics:
+the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
 
 ## Dashboard Design
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+Page 1: Quick Project Summary
+- General information
+    The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
+    To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
+    Goal: Is to train a machine learning model to classify images into these two categories.
+            1. Healthy
+            2. Powdery Mildew
+
+- Project Dataset
+        The dataset used for this project is from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
+        The dataset contains +4 thousand images taken from the client's
+        crop fields.
+        The images show healthy cherry leaves and cherry leaves
+        that have powdery mildew, a fungal disease that affects many plant species.
+        The cherry plantation crop is one of the finest products in their portfolio,
+        and the company is concerned about supplying the market with a compromised quality product.
+        
+        The images show healthy cherry leaves and cherry leaves that
+        have powdery mildew.
+
+- Business requirements
+        The project has 2 business requirements:
+            1 - The client is interested in conducting a study to visually differentiate
+                healthy cherry leaves from those with powdery mildew.
+            2 - The client is interested in predicting if a cherry leaf
+                is healthy or contains powdery mildew."
+Page 2: Project Hypothesis and Validation
+-   Block for each project hypothesis, describe the conclusion and how you validated it.
+
+Page 3: Visual Study Findings
+    It will answer business requirement 1
+    Checkbox 1 - Difference between average and variability image
+    Checkbox 2 - Differences between average
+    Checkbox 3 - Image Montage
+
+Page 4: ML Performance Metrics
+    Label Frequencies for Train, Validation and Test Sets
+    Model History - Accuracy and Losses
+    Model evaluation result
+
+Page 5: Live Predictions
+    Upload a cherry leaf image (JPG/PNG) and the model will predict if it's Healthy or Powdery Mildew affected.
+
 
 ## Unfixed Bugs
 
@@ -93,14 +143,13 @@ The validation process involved the following:
 
 ## Main Data Analysis and Machine Learning Libraries
 
-- Here, you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+-
 
 ## Credits
 
-The process from the Code Institute WalkthroughProject01 project was used to help create this project.
+- The process from the Code Institute WalkthroughProject01 project was used to help create this project.
 
-- In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
-- You can break the credits section up into Content and Media, depending on what you have included in your project.
+In addition to the material from the course I had from Code Institute
 
 ### Content
 

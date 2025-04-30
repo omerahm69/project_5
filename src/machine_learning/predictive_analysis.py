@@ -12,7 +12,6 @@ def plot_predictions_probabilities(pred_proba, pred_class):
     """
     Plot prediction probability results
     """
-
     prob_per_class = pd.DataFrame(
         data=[0, 0],
         index={'Healthy': 0, 'Powdery_mildew': 1}.keys(),
@@ -23,11 +22,11 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         if x not in pred_class:
             prob_per_class.loc[x] = 1 - pred_proba
     prob_per_class = prob_per_class.round(3)
-    prob_per_class['Diagnostic'] = prob_per_class.index
+    prob_per_class['Classify'] = prob_per_class.index
 
     fig = px.bar(
         prob_per_class,
-        x='Diagnostic',
+        x='Classify',
         y=prob_per_class['Probability'],
         range_y=[0, 1],
         width=600, height=300, template='seaborn')
