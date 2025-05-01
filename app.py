@@ -16,7 +16,7 @@ from app_pages.page_ML_performance import page_ML_performance_body
 from app_pages.page_live_predictions import page_live_predictions_body
 
 
-app = MultiPage(app_name="Cherry Leaf Health Classifier")
+app = MultiPage(app_name="")
 
 # Add your app pages here using .add_page()
 app.add_page("Quick Project Summary", page_summary_body)
