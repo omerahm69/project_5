@@ -16,7 +16,6 @@
 
 7.Choose the kernel that says Python 3.12.1 as it inherits from the workspace, so it will be Python-3.12.1 as installed by Codespaces. To confirm this, you can use `! python --version` in a notebook code cell.
 
-
 ## Cloud IDE Reminders
 
 To log into the Heroku toolbelt CLI:
@@ -67,7 +66,6 @@ Business Requirement 2: Classification
 
 -We want an ML model to predict if an image is healthy or not based on historical image data. It is a supervised model, a 2-class, single-label classification model.
 Our ideal outcome is to provide the the cherry plantation crop from Farmy & Foodsmedical with a faster and more reliable way to differentiate between healthy and powdery mildew leaves.
-
 
 The model success metrics are
 
@@ -152,20 +150,8 @@ Page 5: Live Predictions
 ## Credits
 
 - The process from the Code Institute WalkthroughProject01 project was used to help create this project.
-
-In addition to the material from the course I had from Code Institute
-
-### Content
-
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
+    In addition to the material from the course I had from Code Institute
 
 ## Acknowledgements (optional)
 
-- Thank the people who provided support throughout this project.
+- I'm extremely grateful to the completion of my Diploma Full Stack Software Development, it would not have been possible without the support and nurturing of my mentor Mr. Daniel Hamilton.Thank you for Code Institute for giving me the opportunity to join the program and thanks to all of the staff, student care and student support for their patience and encouragement.
