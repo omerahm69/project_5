@@ -142,6 +142,12 @@ Page 5: Live Predictions
 6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
 
 ## Main Data Analysis and Machine Learning Libraries
+-   Python
+-   NumPy, Pandas, matplotlib, Tensorflow, seaborn
+-   Streamlit
+-   jupyter
+-   GitHub
+-   Heroku
 
 ## Credits
 
