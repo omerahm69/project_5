@@ -28,7 +28,6 @@ st.info(
         f"""**Goal**: Train a machine learning model to classify images into these two categories.
             1. **Healthy**
             2. **Powdery Mildew**\n"
-
         **Project Dataset**
         * The dataset used for this project is from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
         The dataset contains +4 thousand images taken from the client's
@@ -40,11 +39,9 @@ st.info(
         
         "The images show healthy cherry leaves and cherry leaves that
         have powdery mildew.""")
-
 st.write(
         f"* For additional information, please visit and **read** the "
         f"[Project README file](https://github.com/codeinstitute/cherry-leaves/main/README.md).")
-    
 st.success(
         
     f"""The project has two business requirements:

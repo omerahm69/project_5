@@ -10,9 +10,7 @@ def page_visual_study_finding_body():
         * After analyzing the dataset, here are the findings to visually differentiate a healthy cherry leaf from one with powdery mildew:
             - Healthy leaves are uniform in color, typically green, and free from white spots.
             - Leaves affected by powdery mildew show noticeable white or grayish fungal growth patterns on their surface. * """
-        
 )
-    
     st.write("---")
     st.write("### Sample Images")
 
@@ -21,7 +19,6 @@ def page_visual_study_finding_body():
         st.image("outputs/v1/avg_var_healthy.png", caption="Healthy Cherry Leaf", use_container_width=True)
     with col2:
         st.image("outputs/v1/avg_var_powdery_mildew.png", caption="Leaf with Powdery Mildew", use_container_width=True)
-
     st.write("---")
     st.write("### Image Analysis Techniques")
 
@@ -32,5 +29,4 @@ def page_visual_study_finding_body():
     - **Difference of Averages**: Emphasized faint patterns of mildew that are hard to spot in raw images.
     """)
 
-   # st.image("outputs/v1/image_montage.png", caption="Image Montage of Samples", use_container_width=True)
     st.image("outputs/v1/avg_diff.png", caption="Difference Between Average Healthy and Powdery Mildew Leaves", use_container_width=True)

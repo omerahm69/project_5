@@ -8,23 +8,22 @@ import os
 import pickle
 
 def load_test_evaluation(version):
-    path= f"C:\\python_projects\\project_5\\outputs\\v1\\evaluation.pkl"
+    path=f"C:\\python_projects\\project_5\\jupyter_notebooks\\outputs\\v1\\evaluation.pkl"
     print("Loadning evaluation from:", path)
     
     with open(path, 'rb') as file:
         return pickle.load(file)
 
-
 def page_ML_performance_body():
     version = 'v1'
 
-    path = f"outputs/{version}/labels_distribution.png"
+    path = f"jupyter_notebooks/outputs/{version}/labels_distribution.png"
     print("Does file exist?", os.path.exists(path))
     print("Absolute path:", os.path.abspath(path))
 
     st.write("### Train, Validation and Test Set: Labels Frequencies")
 
-    labels_distribution = plt.imread("outputs\\v1\\labels_distribution.png")
+    labels_distribution = plt.imread("jupyter_notebooks\\outputs\\v1\\labels_distribution.png")
 
     st.image(labels_distribution, caption='Labels Distribution on Train,'\
 'Validation and Test Sets')

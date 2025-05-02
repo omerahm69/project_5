@@ -1,13 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
-import streamlit as st
-from PIL import Image
-import numpy as np
-import tensorflow as tf
-import pandas as pd
 import pickle
-
-import streamlit as st
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -17,7 +10,7 @@ import os
 
 
 CLASS_NAMES = ["Healthy", "Powdery Mildew"]
-IMG_SIZE = (256, 256) 
+IMG_SIZE = (256, 256)
 
 # --- Load model once and cache ---
 @st.cache_resource
