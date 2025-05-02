@@ -4,6 +4,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import tensorflow as tf
+import pandas as pd
 
 def page_live_predictions_body():
 
@@ -41,7 +42,8 @@ def plot_predictions_probabilities(pred_proba, pred_class):
 def resize_input_image(img, version):
     """
     Reshape image to average image size
-    """
+"""
+    version ='v1'
     image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
     img_resized = img.resize((image_shape[1], image_shape[0]), Image.LANCZOS)
     my_image = np.expand_dims(img_resized, axis=0)/255
@@ -53,7 +55,7 @@ def load_model_and_predict(my_image, version):
     Load and perform ML prediction over live images
     """
 
-    model = load_model(f"outputs/{version}/cherry_leaf_model.h5")
+    model = load_model(f"outputs/{version}/my_model.keras")
     
     pred_proba = model.predict(my_image)[0, 0]
 
@@ -71,7 +73,11 @@ def load_model_and_predict(my_image, version):
 # Load the trained model (load only once)
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("outputs/v1/my_model.keras")
+    import os
+    print("Working directory:", os.getcwd())
+    print("Model file exists:", os.path.exists("C:\\python_projects\\project_5\\jupyter_notebooks\\outputs\\v1\\my_model.keras"))
+
+    model = tf.keras.models.load_model("jupyter_notebooks/outputs/v1/my_model.keras")
     return model
 
 # Preprocessing function
