@@ -28,10 +28,6 @@ To log into the Heroku toolbelt CLI:
 
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, then you can create a new one with _Regenerate API Key_.
 
-## Dataset Content
-
-- The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-- The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
 
 ## Business Case Requirements
 
@@ -104,7 +100,27 @@ The output includes:
 
 
 Success Metric:
-Minimum 97% accuracy on unseen data.
+The client consider a succeful project outcome as:
+-  A study showing how to visually differentiate a cherry leaf that is helathy form pwdery mildew
+-  The capability of the model to predict if a cherry leaf is healthy or contains powdery mildew 
+
+Ethical and Privacy Considerations:
+- The client provided the data under an NDA (non-disclosure agreement),
+- The data should only be shared with professionals that are officially involved in the project.
+
+Project Breakdown
+Epics and User Stories
+1. Information Gathering and Data Collection
+   - As a data scintist, I need access to labeled leaf images to train and test the model.
+3. Data Visualization, Cleaning and Preparation
+   - As a data analyst, I want to explore visual differencies to assist in the visual study.
+4. Model Training and Visulaization
+   - As an ML engineer, I want to train a binary classifier to distinguish leaf health status.
+5. Dashboard Development
+    - As a frontend developer, I want to design and build an intuitive dashboard.
+7. Deployment and Release
+
+   - As a DevOps engineer, I want to deploy thedashboard securely and reliably
 
 Business Benefit:
 
@@ -117,53 +133,37 @@ Business Benefit:
 
 ## Dashboard Design
 
-Page 1: Quick Project Summary
-- General information
-    The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
-    To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
-    Goal: Is to train a machine learning model to classify images into these two categories.
-            1. Healthy
-            2. Powdery Mildew
+Page 1: Project Summary
+- Overview of the powdery mildew challenge.
+- ML as proposed scalable solution
+- Dataset origin and structure
+- Clear project goal to classify cherry leaf images into Healthy or Powdery Mildew.
 
-- Project Dataset
-        The dataset used for this project is from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
-        The dataset contains +4 thousand images taken from the client's
-        crop fields.
-        The images show healthy cherry leaves and cherry leaves
-        that have powdery mildew, a fungal disease that affects many plant species.
-        The cherry plantation crop is one of the finest products in their portfolio,
-        and the company is concerned about supplying the market with a compromised quality product.
-        
-        The images show healthy cherry leaves and cherry leaves that
-        have powdery mildew.
+Page 2: Hypothesis and Validation
 
-- Business requirements
-        The project has 2 business requirements:
-            1 - The client is interested in conducting a study to visually differentiate
-                healthy cherry leaves from those with powdery mildew.
-            2 - The client is interested in predicting if a cherry leaf
-                is healthy or contains powdery mildew."
-Page 2: Project Hypothesis and Validation
--   Block for each project hypothesis, describe the conclusion and how you validated it.
+   - List and explain each hypothesis.
+   - Describe methods and results of validation
 
 Page 3: Visual Study Findings
-    It will answer business requirement 1
-    Checkbox 1 - Difference between average and variability image
-    Checkbox 2 - Differences between average
-    Checkbox 3 - Image Montage
+
+    It will answer business requirement 1:
+   - Checkbox 1 - Difference between average and variability image
+   - Checkbox 2 - Differences between average
+   - Checkbox 3 - Image Montage -Leaf montage for both categories 
 
 Page 4: ML Performance Metrics
-    Label Frequencies for Train, Validation and Test Sets
-    Model History - Accuracy and Losses
-    Model evaluation result
+   - Class distribution in training, validation and test sets
+   - Model Training History - Accuracy and Losses
+   - Final Model evaluation result (metrics)
 
 Page 5: Live Predictions
-    Upload a cherry leaf image (JPG/PNG) and the model will predict if it's Healthy or Powdery Mildew affected.
+   -  Upload an image cherry leaf (JPG/PNG)
+   -  Receive instant prediction:  Healthy or Powdery Mildew affected.
 
 
 ## Unfixed Bugs
 
-- You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+- Is the dashboard expectations of having a table with the image name and prediction results, and download button to download the table 
 
 ## Deployment
 
@@ -191,7 +191,7 @@ Page 5: Live Predictions
 ## Credits
 
 - The process from the Code Institute WalkthroughProject01 project was used to help create this project.
-    In addition to the material from the course I had from Code Institute
+    In addition to the material from the course, 'Data Analytics Packages' I had from Code Institute
 
 ## Acknowledgements (optional)
 
