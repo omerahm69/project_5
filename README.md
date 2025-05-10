@@ -28,11 +28,9 @@ To log into the Heroku toolbelt CLI:
 
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, then you can create a new one with _Regenerate API Key_.
 
-
 ## Business Case Requirements
 
 General information:
-
 The cherry plantation crop from Farmy & Foods, a large-scale cherry plantation operator, is facing a critical issue with powdery mildew, a fungal disease affecting cherry leaves. The current inspection process is manual, requiring an employee to spend 
 ~ 30 minutes per tree visually analyzing leaf samples. If mildew is found, a compound is applied in 1 minute. Given the thousands of trees across multiple farms, this approach is unscalable and labor-intensive.
 
@@ -51,13 +49,13 @@ Traditional data analysis can support the visual study by:
 - Highlighting key visual features (e.g., color distribution, texture features, and leaf shape)
 - Providing explainable insighs into the model's behavior.
 
-  ML Solution
+ML Solution
 To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops.
 
 Dataset: The dataset is a collection of over 4,000 cherry leaf images (healthy and infected), provided by the client and also hosted on Kaggle.  
 
-- 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
-- 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+ 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
+ 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
 ## Hypothesis and validation
 Hypothesis:
@@ -68,36 +66,25 @@ Validation Steps:
 -    Track performance metrics such as accuracy and precision
 -    Evaluate against a seperate test set to ensure generalizability.
 
-
 ## Mapping Business Requirements to ML Tasks
 
 Requuirement 1 - Visual Study 
-
 Mapped to Data Visualisations Tasks:
-
 - Display class-wise mean and standard deviation images.
-
 - Show the difference between average images of both classes.
-
 - Present image montages to visualize variation. 
 
 Requirement 2 - Prediction
 Mapped to ML Tasks:
-    
 - Train a binary classifier (Healthy vs. Powdery Mildew).
-
 - Generate classification reports and evaluate with metrics.
-
 - Deploy predictions through a web-based dashboard.
 
-
 ## ML Business Case
-
--We want an ML model to predict if an image is healthy or not based on historical image data. It is a supervised binary classification model that predicts whether a cherry leaf is healthy or infected.
+We want an ML model to predict if an image is healthy or not based on historical image data. It is a supervised binary classification model that predicts whether a cherry leaf is healthy or infected.
 The output includes:
 -    A classification label
 -    Associated probability/confidence score.
-
 
 Success Metric:
 The client consider a succeful project outcome as:
@@ -119,17 +106,12 @@ Epics and User Stories
 5. Dashboard Development
     - As a frontend developer, I want to design and build an intuitive dashboard.
 7. Deployment and Release
-
    - As a DevOps engineer, I want to deploy thedashboard securely and reliably
 
 Business Benefit:
-
 -    Reduce inspection time from 30 minutes to seconds per tree.
-
 -    Prevent supply chain contamination with compromised produce.
-
 -    Enable future cross-crop scalability for other fungal or pest infections.
-
 
 ## Dashboard Design
 
@@ -140,13 +122,11 @@ Page 1: Project Summary
 - Clear project goal to classify cherry leaf images into Healthy or Powdery Mildew.
 
 Page 2: Hypothesis and Validation
-
    - List and explain each hypothesis.
    - Describe methods and results of validation
 
 Page 3: Visual Study Findings
-
-    It will answer business requirement 1:
+    It will answer buisness requirement 1:
    - Checkbox 1 - Difference between average and variability image
    - Checkbox 2 - Differences between average
    - Checkbox 3 - Image Montage -Leaf montage for both categories 
