@@ -1,0 +1,10 @@
+*.csv
+*.zip
+*.tar.gz
+tests/
+docs/
+notebooks/
+.env
+__pycache__/
+*.pyc
+*.tensorflow
