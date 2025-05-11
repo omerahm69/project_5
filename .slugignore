@@ -7,4 +7,5 @@ notebooks/
 .env
 __pycache__/
 *.pyc
-*.tensorflow
+tensorflow/
+outputs/
