@@ -16,9 +16,9 @@ def page_visual_study_finding_body():
 
     col1, col2 = st.columns(2)
     with col1:
-        st.image("outputs/v1/avg_var_healthy.png", caption="Healthy Cherry Leaf", use_container_width=True)
+        st.image("./jupyter_notebooks/outputs/v1/avg_var_healthy.png", caption="Healthy Cherry Leaf", use_container_width=True)
     with col2:
-        st.image("outputs/v1/avg_var_powdery_mildew.png", caption="Leaf with Powdery Mildew", use_container_width=True)
+        st.image("./jupyter_notebooks/outputs/v1/avg_var_powdery_mildew.png", caption="Leaf with Powdery Mildew", use_container_width=True)
     st.write("---")
     st.write("### Image Analysis Techniques")
 
@@ -29,4 +29,4 @@ def page_visual_study_finding_body():
     - **Difference of Averages**: Emphasized faint patterns of mildew that are hard to spot in raw images.
     """)
 
-    st.image("outputs/v1/avg_diff.png", caption="Difference Between Average Healthy and Powdery Mildew Leaves", use_container_width=True)
+    st.image("./jupyter_notebook/outputs/v1/avg_diff.png", caption="Difference Between Average Healthy and Powdery Mildew Leaves", use_container_width=True)

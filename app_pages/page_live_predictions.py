@@ -15,7 +15,7 @@ IMG_SIZE = (256, 256)
 # --- Load model once and cache ---
 @st.cache_resource
 def load_model():
-    model_path = "jupyter_notebooks/outputs/v1/my_model.keras"
+    model_path = "./jupyter_notebooks/outputs/v1/my_model.keras"
     if not os.path.exists(model_path):
         st.error(f"Model file not found at: {model_path}")
         return None
