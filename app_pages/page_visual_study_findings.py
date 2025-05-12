@@ -29,4 +29,4 @@ def page_visual_study_finding_body():
     - **Difference of Averages**: Emphasized faint patterns of mildew that are hard to spot in raw images.
     """)
 
-    st.image("./jupyter_notebook/outputs/v1/avg_diff.png", caption="Difference Between Average Healthy and Powdery Mildew Leaves", use_container_width=True)
+    st.image("./jupyter_notebooks/outputs/v1/avg_diff.png", caption="Difference Between Average Healthy and Powdery Mildew Leaves", use_container_width=True)
