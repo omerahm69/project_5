@@ -13,8 +13,6 @@ tests/
 docs/
 notebooks/
 .env
-__pycache__/
-*.pyc
 tensorflow/
 outputs/
 *.json

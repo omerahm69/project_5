@@ -26,7 +26,7 @@ def preprocess_image(img):
     img = img.convert("RGB")
     img = img.resize(IMG_SIZE, Image.LANCZOS)
     img_array = np.array(img) / 255.0  # Normalize
-    return np.expand_dims(img_array, axis=0) 
+    return np.expand_dims(img_array, axis=0)
 
 # --- Make prediction ---
 def predict_image(model, input_tensor):
