@@ -16,11 +16,11 @@ def load_test_evaluation(version):
 
 def page_ML_performance_body():
     version = 'v1'
-    path="./jupyter_notebooks\\outputs\\v1\\labels_distribution.png"
+    path="./jupyter_notebooks/outputs/v1/labels_distribution.png"
     print("Does file exist?", os.path.exists(path))
     print("Absolute path:", os.path.abspath(path))
     st.write("### Train, Validation and Test Set: Labels Frequencies")
-    labels_distribution = plt.imread(".jupyter_notebooks\\outputs\\v1\\labels_distribution.png")
+    labels_distribution = plt.imread("./jupyter_notebooks/outputs/v1/labels_distribution.png")
 
     st.image(labels_distribution, caption='Labels Distribution on Train,'\
 'Validation and Test Sets')
