@@ -23,13 +23,11 @@ COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy project files
-COPY . .
+COPY . /app
 
 
 # Streamlit runs on port 8501 by default
-EXPOSE 8501
+EXPOSE $PORT
 
 # Start server using Gunicorn
-
-
-CMD streamlit run app.py --server.port $PORT --server.enableCORS false
+CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
