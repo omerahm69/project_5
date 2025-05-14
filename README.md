@@ -149,7 +149,7 @@ Page 5: Live Predictions
 
 ### Heroku
 
-- The App live link is: `https://dashboard.heroku.com/apps/predictive-project/`
+- The App live link is: `'https://dashboard.heroku.com/apps/predictive-project/', https://predictive-project-8e57aac044ed.herokuapp.com/' `
 - Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 - The project was deployed to Heroku using the following steps.
 

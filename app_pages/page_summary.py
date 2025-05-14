@@ -41,7 +41,7 @@ st.info(
         have powdery mildew.""")
 st.write(
         f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/codeinstitute/cherry-leaves/main/README.md).")
+        f"[Project README file](https://github.com/omerahm69/project_5/blob/main/README.md).")
 st.success(
         
     f"""The project has two business requirements:
